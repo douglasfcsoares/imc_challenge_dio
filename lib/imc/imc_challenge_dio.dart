@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
+
 void main() {
   stdout.write('Digite seu peso em Kg (Ex.: 82.5): ');
   double peso = double.parse(stdin.readLineSync().toString());
@@ -9,23 +11,23 @@ void main() {
 
   double imc = peso / (altura * altura);
 
-  print('Seu IMC é ${imc.toStringAsFixed(2)}');
+  debugPrint('Seu IMC é ${imc.toStringAsFixed(2)}');
 
   if (imc < 16) {
-    print('Magreza grave');
+    debugPrint('Magreza grave');
   } else if (imc < 17) {
-    print('Magreza moderada');
+    debugPrint('Magreza moderada');
   } else if (imc < 18.5) {
-    print('Magreza leve');
+    debugPrint('Magreza leve');
   } else if (imc < 25) {
-    print('Saudável');
+    debugPrint('Saudável');
   } else if (imc < 30) {
-    print('Sobrepeso');
+    debugPrint('Sobrepeso');
   } else if (imc < 35) {
-    print('Obesidade – GRAU I');
+    debugPrint('Obesidade – GRAU I');
   } else if (imc < 40) {
-    print('Obesidade – GRAU II | Severa');
+    debugPrint('Obesidade – GRAU II | Severa');
   } else {
-    print('Obesidade – GRAU III | Mórbida');
+    debugPrint('Obesidade – GRAU III | Mórbida');
   }
 }
